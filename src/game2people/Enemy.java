@@ -17,7 +17,7 @@ public class Enemy extends Person {
         if (pl.rand_num == num) {
             --pl.health;
             if (pl.health != 0) {
-                System.out.println(this.name + ", Ви вгадали тепер у гравця з ім'ям " + pl.name + " залишилось " + pl.health + " життів!");
+                System.out.println(this.name + ",  Ви вгадали тепер у гравця з ім'ям " + pl.name + " залишилось " + pl.health + " життів!");
                 pl.rand_num = this.rand.nextInt(pl.max - pl.min + 1) + pl.min;
             } else {
                 System.out.println("Вітаю! " + this.name + ", Ви завалили - " + pl.name);
