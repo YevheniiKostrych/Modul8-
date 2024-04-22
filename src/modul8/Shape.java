@@ -34,7 +34,8 @@ class Pentagon extends Shape{
 
 class ShapePrinter{
        public void shepePrint (Shape shape){
-     shape.getNameOfShape();
+
+           shape.getNameOfShape();
 }
     }
 class ShapePrintTest {
