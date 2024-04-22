@@ -24,9 +24,9 @@ public class Enemy extends Person {
                 System.out.println(pl.name + "- ЛОХ");
             }
         } else if (num > pl.rand_num) {
-            System.out.println(this.name + ", Ви не вгадали! Число що ви намагаєтесь вгадати МЕНЬШЕ<" + num);
+            System.out.println(this.name + ",  Ви не вгадали! Число що ви намагаєтесь вгадати МЕНЬШЕ<" + num);
         } else {
-            System.out.println(this.name + ", Ви не вгадали! Число що ви намагаєтесь вгадати БІЛЬШЕ>" + num);
+            System.out.println(this.name + ",  Ви не вгадали! Число що ви намагаєтесь вгадати БІЛЬШЕ>" + num);
         }
 
     }
