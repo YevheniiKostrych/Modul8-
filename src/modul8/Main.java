@@ -8,12 +8,12 @@ class Main{
         Rectangle rectangle=new Rectangle();
         Pentagon pentagon=new Pentagon();
 
+
+
         ShapePrinter shapePrinter=new ShapePrinter();
-        shapePrinter.shepePrint(circle);
-        shapePrinter.shepePrint(quad);
-        shapePrinter.shepePrint(triangle);
-        shapePrinter.shepePrint(rectangle);
-        shapePrinter.shepePrint(pentagon);
+        shapePrinter.shepePrint(circle,"Circle");
+
+
 
 
     }

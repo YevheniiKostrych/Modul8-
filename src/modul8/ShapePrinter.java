@@ -1,8 +1,19 @@
 package modul8;
 
-class ShapePrinter{
-    public void shepePrint (Shape shape){
+class ShapePrinter {
+    public void shepePrint (Shape shape, String name){
+        shape.getNameOfShape(shape,name );
 
-        shape.getNameOfShape();
+         ColorOfBody colorOfBody = new ColorOfBody() {
+             @Override
+             public void getColorOfBody() {
+
+             }
+         };
+
+colorOfBody.getColorOfBody();
+
     }
+
+
 }
