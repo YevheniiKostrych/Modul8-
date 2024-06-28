@@ -1,51 +1,22 @@
 package modul9.myArrayList;
-
-
-
-
-
-public class MyArrayList  {
-
-    private Object[] elementData;
+import java.util.Arrays;
+public class MyArrayList <T> {
     private static final int DEFAULT_CAPACITY = 10;
+    private T[] elementData ;
     private int size ;
-
     public MyArrayList() {
-        elementData = new Object[DEFAULT_CAPACITY];
+        elementData = (T[]) new Object[DEFAULT_CAPACITY];
         size = 0;
     }
-
-    public String toString() {
-         StringBuilder sb = new StringBuilder();
-
-        sb.append("[");
-        for (int i = 0; i < elementData.length; i++) {
-            sb.append(elementData[i]);
-            if (i + 1 < elementData.length&&elementData[i+1]!=null) {
-                sb.append(",");
-            }
-            if (elementData[i+1]==null) {
-                sb.append("]");
-                return sb.toString();
-            }
+    public void add(T t) {
+            int oldCapacity=DEFAULT_CAPACITY;
+      if (size == elementData.length){
+           int newCapacity= (int) (oldCapacity*1.5);
+           elementData= Arrays.copyOf(elementData,newCapacity);
+        elementData[size++]=t;
         }
-        sb.append("]");
-        return sb.toString();
-    }
-
-
-
-    public void add(Object o) {
-
-
-
-        if (size == elementData.length){
-            System.out.println(-1);
-        }
-
-        elementData[size++] = o;
-
-
+        else
+            elementData[size++]=t;
     }
     public void remove(int index) {
         if (index < 0 || index >= size) {
@@ -55,28 +26,39 @@ public class MyArrayList  {
             elementData[i]=elementData[i+1];
         }
      elementData[--size]=null;
-
-
     }
     public void clear(){
         for (int i = 0; i < size; i++) {
             elementData[i]=null;
         }
         size=0;
-
-        }
+    }
         public int size(){
         return size;
         }
-        public Object get(int index){
+        public T get(int index){
             if (index<0||index>=size){
                 throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
             }
             return elementData[index];
         }
-
-
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < elementData.length; i++) {
+            sb.append(elementData[i]);
+            if (i + 1< size) {
+                sb.append(",");
+            }
+            if (i==size-1) {
+                sb.append("]");
+                return sb.toString();
+            }
+        }
+        sb.append("]");
+        return sb.toString();
     }
+}
 
 
 

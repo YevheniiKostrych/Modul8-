@@ -1,4 +1,4 @@
-package modul8;
+package modul9;
 
  public abstract class Shape {
      public abstract void getNameOfShape();

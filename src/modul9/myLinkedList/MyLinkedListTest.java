@@ -7,7 +7,7 @@ public class MyLinkedListTest {
         myLinkedList.add("B");
         myLinkedList.add("C");
         myLinkedList.add("D");
-        myLinkedList.add("E");
+        myLinkedList.add(null);
 
         System.out.println(myLinkedList);
         System.out.println(myLinkedList.get(2));
